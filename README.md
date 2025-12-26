@@ -11,54 +11,54 @@ This project treats catchphrase extraction as a Sequence Labeling task (similar 
 
 Key Features.
 
-  Contextual Embeddings: Uses Doc2Vec and Word2Vec techniques to understand legal jargon.
+    Contextual Embeddings: Uses Doc2Vec and Word2Vec techniques to understand legal jargon.
 
-  Deep Memory Network: Utilizes a stacked Bidirectional LSTM (4 layers) to capture long-range dependencies in complex sentence structures common in Indian judgments.
+    Deep Memory Network: Utilizes a stacked Bidirectional LSTM (4 layers) to capture long-range dependencies in complex sentence structures common in Indian judgments.
 
-  Probabilistic Output: Employing a CRF (Conditional Random Field) layer to ensure the predicted sequence of tags is valid.
+    Probabilistic Output: Employing a CRF (Conditional Random Field) layer to ensure the predicted sequence of tags is valid.
 
-  IOB Tagging: Implements the Inside-Outside-Beginning tagging scheme for precise phrase boundary detection.
+    IOB Tagging: Implements the Inside-Outside-Beginning tagging scheme for precise phrase boundary detection.
 
 
 🧠 Model Architecture
 
 The model processes text through the following pipeline:
 
-  Input Layer: Tokenized legal text sequences (padded to max length).
+    Input Layer: Tokenized legal text sequences (padded to max length).
 
-  Embedding Layer: Pre-trained embeddings (Doc2Vec) are mapped to an embedding matrix.
+    Embedding Layer: Pre-trained embeddings (Doc2Vec) are mapped to an embedding matrix.
 
 Bi-LSTM Stack:
 
-  Layer 1: 256 Units (Bidirectional)
+    Layer 1: 256 Units (Bidirectional)
 
-  Layer 2: 128 Units (Bidirectional)
+    Layer 2: 128 Units (Bidirectional)
 
-  Layer 3: 64 Units (Bidirectional)
+    Layer 3: 64 Units (Bidirectional)
 
-  Layer 4: 32 Units (Bidirectional)
+    Layer 4: 32 Units (Bidirectional)
 
   CRF Layer: A Conditional Random Field layer acts as the final classifier to predict the optimal sequence of tags (Catchphrase vs. Non-Catchphrase).
 
 🛠️ Tech Stack & Libraries
   Language: Python
 
-  Deep Learning: TensorFlow, Keras, Keras-contrib (for CRF)
+    Deep Learning: TensorFlow, Keras, Keras-contrib (for CRF)
 
-  NLP: NLTK, Gensim (Doc2Vec)
+    NLP: NLTK, Gensim (Doc2Vec)
 
-  Data Handling: Pandas, NumPy
+    Data Handling: Pandas, NumPy
 
-  Evaluation: Scikit-learn (Seqeval metrics)
+    Evaluation: Scikit-learn (Seqeval metrics)
 
 📂 Dataset
   The model is trained on a legal dataset (Final_200.csv) containing:
 
-  Text: Full text of the court judgment/case.
+    Text: Full text of the court judgment/case.
 
-  Catchphrases: The ground truth keywords associated with the case.
+    Catchphrases: The ground truth keywords associated with the case.
 
-  Note: The dataset requires preprocessing (lowercasing, punctuation removal, and stopword filtering) before entering the model pipeline.
+    Note: The dataset requires preprocessing (lowercasing, punctuation removal, and stopword filtering) before entering the model pipeline.
 
 🚀 Installation & Usage .
 
@@ -108,25 +108,26 @@ Extracted Catchphrases:
 
     "Murder"
 
-🔮 Future Improvements
-  Class Imbalance Handling: Implementing weighted loss functions to better prioritize catchphrase tags over non-catchphrase text.
+🔮 Future Improvements.
 
-  Transformer Models: Experimenting with Legal-BERT (trained on Indian legal corpus) or RoBERTa for better contextual embeddings compared to Doc2Vec.
+    Class Imbalance Handling: Implementing weighted loss functions to better prioritize catchphrase tags over non-catchphrase text.
 
-  Data Augmentation: Increasing the dataset size beyond 200 documents to improve generalization across different courts (High Court vs. Supreme Court).
+    Transformer Models: Experimenting with Legal-BERT (trained on Indian legal corpus) or RoBERTa for better contextual embeddings compared to Doc2Vec.
+    
+    Data Augmentation: Increasing the dataset size beyond 200 documents to improve generalization across different courts (High Court vs. Supreme Court).
 
 🤝 Contributing
-  Contributions are welcome! Please feel free to submit a Pull Request.
+    Contributions are welcome! Please feel free to submit a Pull Request.
 
 Fork the Project
 
-  Create your Feature Branch (git checkout -b feature/AmazingFeature)
+    Create your Feature Branch (git checkout -b feature/AmazingFeature)
 
-  Commit your Changes (git commit -m 'Add some AmazingFeature')
+    Commit your Changes (git commit -m 'Add some AmazingFeature')
 
-  Push to the Branch (git push origin feature/AmazingFeature)
+    Push to the Branch (git push origin feature/AmazingFeature)
 
-  Open a Pull Request
+    Open a Pull Request
 
 ---
 ## 📝 License
