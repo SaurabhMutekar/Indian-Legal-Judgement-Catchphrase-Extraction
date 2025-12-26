@@ -58,7 +58,7 @@ Note: The dataset requires preprocessing (lowercasing, punctuation removal, and 
 1. Clone the Repository
 Bash
 
-git clone https://github.com/yourusername/legal-catchphrase-extraction.git
+git clone https://github.com/SaurabhMutekar/legal-catchphrase-extraction.git
 cd legal-catchphrase-extraction
 2. Install Dependencies
 This project relies on tensorflow-addons and keras-contrib for the CRF layer.
