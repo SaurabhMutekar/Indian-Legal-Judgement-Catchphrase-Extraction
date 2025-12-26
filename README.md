@@ -1,15 +1,15 @@
-⚖️ LegalEase: Catchphrase Extraction using Bi-LSTM & CRF
-LegalEase is a Deep Learning Natural Language Processing (NLP) project designed to automatically extract meaningful catchphrases and keywords from complex legal judgments and case files. By leveraging a hybrid architecture of Bidirectional LSTMs and Conditional Random Fields (CRF), this model captures both the sequential context of legal text and the probabilistic dependencies of entity tags.
+⚖️ 🇮🇳 Indian-Legal-Judgement-Catchphrase-Extraction
+Indian-Legal-Judgement-Catchphrase-Extraction is a Deep Learning Natural Language Processing (NLP) project designed to automatically extract meaningful catchphrases and keywords from Indian court judgments and legal files. By leveraging a hybrid architecture of Bidirectional LSTMs and Conditional Random Fields (CRF), this model captures both the sequential context of Indian legal text and the probabilistic dependencies of entity tags.
 
 📖 Overview
-Legal documents are notoriously dense and lengthy. For legal professionals, summarizing these documents into key "Catchphrases" (e.g., SECTION 302 IPC, CULPABLE HOMICIDE, BREACH OF CONTRACT) is essential for indexing and quick retrieval.
+Legal documents in the Indian judiciary are notoriously dense and lengthy. For legal professionals, summarizing these judgments into key "Catchphrases" (e.g., SECTION 302 IPC, CULPABLE HOMICIDE, BREACH OF CONTRACT) is essential for indexing, citation, and quick retrieval.
 
-This project treats catchphrase extraction as a Sequence Labeling task (similar to Named Entity Recognition).
+This project treats catchphrase extraction as a Sequence Labeling task (similar to Named Entity Recognition), specifically tailored for the vocabulary and structure found in Indian case law.
 
 Key Features
 Contextual Embeddings: Uses Doc2Vec and Word2Vec techniques to understand legal jargon.
 
-Deep Memory Network: Utilizes a stacked Bidirectional LSTM (4 layers) to capture long-range dependencies in complex sentence structures.
+Deep Memory Network: Utilizes a stacked Bidirectional LSTM (4 layers) to capture long-range dependencies in complex sentence structures common in Indian judgments.
 
 Probabilistic Output: Employing a CRF (Conditional Random Field) layer to ensure the predicted sequence of tags is valid.
 
@@ -58,8 +58,8 @@ Note: The dataset requires preprocessing (lowercasing, punctuation removal, and 
 1. Clone the Repository
 Bash
 
-git clone https://github.com/SaurabhMutekar/legal-catchphrase-extraction.git
-cd legal-catchphrase-extraction
+git clone https://github.com/SaurabhMutekar/Indian-Legal-Judgement-Catchphrase-Extraction.git
+cd Indian-Legal-Judgement-Catchphrase-Extraction
 2. Install Dependencies
 This project relies on tensorflow-addons and keras-contrib for the CRF layer.
 
@@ -97,14 +97,14 @@ Extracted Catchphrases:
 
 "Indian Penal Code"
 
-"Murder" 
+"Murder"
 
 🔮 Future Improvements
 Class Imbalance Handling: Implementing weighted loss functions to better prioritize catchphrase tags over non-catchphrase text.
 
-Transformer Models: Experimenting with Legal-BERT or RoBERTa for better contextual embeddings compared to Doc2Vec.
+Transformer Models: Experimenting with Legal-BERT (trained on Indian legal corpus) or RoBERTa for better contextual embeddings compared to Doc2Vec.
 
-Data Augmentation: Increasing the dataset size beyond 200 documents to improve generalization.
+Data Augmentation: Increasing the dataset size beyond 200 documents to improve generalization across different courts (High Court vs. Supreme Court).
 
 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
