@@ -120,13 +120,8 @@ Push to the Branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 ---
-
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
----
-
-<p align="center">
-  <img src="https://media.giphy.com/media/l0HlPTbGpCn2xQQSI/giphy.gif" width="200" alt="Legal Hammer">
-</p>
+This content is available in the LICENSE file.
